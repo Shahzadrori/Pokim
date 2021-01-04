@@ -8,9 +8,9 @@ let [moves,setmoves] = useState();
 
 useEffect(
     async function getdata(){
-        const res = await axios.get(`${num}`);
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${num}`);
         setname(res.data.name);
-        setmoves(res.data.moves.length);
+        setmoves(res.data.moves.length);   
     }
 );
 
